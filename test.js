@@ -51,3 +51,19 @@ test("test delete todo", () => {
   ];
   expect(actual).toEqual(expected);
 });
+
+//////////////////////////////////////////////
+const todosArray = [
+  { id: -3, description: "first todo", done: false },
+  { id: -2, description: "second todo", done: false },
+  { id: -1, description: "third todo", done: false }
+];
+const todoMarkExpected = [
+  { id: -3, description: "first todo", done: false },
+  { id: -2, description: "second todo", done: false },
+  { id: -1, description: "third todo", done: true }
+];
+
+test("markTodo function return new array with specific item marked as done", function() {
+  expect(logic.markTodo(todosArray, -1)).toEqual(todoMarkExpected);
+});

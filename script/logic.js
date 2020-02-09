@@ -18,11 +18,23 @@ let todoFunctions = {
   addTodo: function(todos, newTodo) {
     return todoFunctions.cloneArrayOfObjects(todos).concat(newTodo);
   },
-  
+
   deleteTodo: function(todos, idToDelete) {
     return todoFunctions
       .cloneArrayOfObjects(todos)
       .filter(val => val.id != idToDelete);
+  },
+  markTodo: function(todos, idToMark) {
+    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
+    // in the new todo array, all elements will remain unchanged except the one with id: idToMark
+    // this element will have its done value toggled
+    // hint: array.map
+
+    return todos.map(todo => ({
+      id: todo.id,
+      description: todo.description,
+      done: todo.id == idToMark ? !todo.done : todo.done
+    }));
   }
 };
 
