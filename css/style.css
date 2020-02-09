@@ -1,0 +1,62 @@
+* {
+  /* margin: 0 auto; */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: rgb(128, 105, 0);
+  font-size: 20px;
+  text-align: center;
+}
+
+#add-todo {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#add-todo input {
+  background-color: black;
+  color: rgb(128, 105, 0);
+  border: 1px solid rgb(128, 105, 0);
+  border-radius: 5px;
+  text-align: center;
+  height: 40px;
+  font-size: 20px;
+}
+button {
+  background-color: black;
+  color: red;
+  border: red solid 1px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+#todo-container {
+  border: 2px solid;
+  padding: 2%;
+  margin-top: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+/* ul {
+  border: 2px solid;
+  padding: 2%;
+} */
+ul li {
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 25px;
+  justify-content: space-between;
+  padding: 5px;
+  border: 2px solid;
+}
+input[type="checkbox"] {
+  background-color: black;
+}
+
+input:checked + span {
+  text-decoration: line-through;
+}
