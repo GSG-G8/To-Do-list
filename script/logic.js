@@ -1,6 +1,6 @@
-const todoFunctions = {
+let todoFunctions = {
   generateId: (function() {
-    const idCounter = 0;
+    let idCounter = 0;
 
     function incrementCounter() {
       return (idCounter += 1);
@@ -17,6 +17,12 @@ const todoFunctions = {
 
   addTodo: function(todos, newTodo) {
     return todoFunctions.cloneArrayOfObjects(todos).concat(newTodo);
+  },
+  
+  deleteTodo: function(todos, idToDelete) {
+    return todoFunctions
+      .cloneArrayOfObjects(todos)
+      .filter(val => val.id != idToDelete);
   }
 };
 
@@ -24,6 +30,6 @@ const todoFunctions = {
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details:
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-// if (typeof module !== 'undefined') {
-//   module.exports = todoFunctions;
-// }
+if (typeof module !== "undefined") {
+  module.exports = todoFunctions;
+}

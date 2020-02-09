@@ -1,0 +1,24 @@
+{
+  "name": "To-Do-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "jest": "^25.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": " jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G8/To-Do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G8/To-Do-list/issues"
+  },
+  "homepage": "https://github.com/GSG-G8/To-Do-list#readme"
+}
